@@ -1,0 +1,10 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: telemetry-config
+  namespace: telemetry-namespace
+data:
+  SPRING_DATASOURCE_URL: jdbc:postgresql://postgres:5432/telemetrydb
+  SPRING_DATASOURCE_USERNAME: telemetry
+  SPRING_DATASOURCE_PASSWORD: telemetry123
+  SPRING_KAFKA_BOOTSTRAP_SERVERS: kafka:29092
