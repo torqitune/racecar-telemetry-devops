@@ -1,0 +1,25 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: telemetry-app
+  namespace: telemetry-namespace
+  labels:
+    app: telemetry-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: telemetry-app
+  template:
+    metadata:
+      labels:
+        app: telemetry-app
+    spec:
+      containers:
+        - name: telemetry-app
+          image: beamerv12/devops-poc-node-app:latest
+          ports:
+            - containerPort: 8081
+          env:
+            - name: NODE_ENV
+              value: "production"
