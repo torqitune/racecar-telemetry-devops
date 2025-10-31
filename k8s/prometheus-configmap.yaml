@@ -12,3 +12,4 @@ data:
       - job_name: 'telemetry-app'
         static_configs:
           - targets: ['telemetry-service.telemetry-namespace.svc.cluster.local:8081']
+            metrics_path: '/actuator/prometheus'

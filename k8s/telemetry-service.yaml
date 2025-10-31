@@ -11,5 +11,5 @@ spec:
     app: telemetry-app
   ports:
     - port: 8081
-      targetPort: 8081
+      targetPort: 3000
       nodePort: 30081
